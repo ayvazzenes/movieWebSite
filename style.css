@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Electrolize&display=swap');
+
+/*! base css start  */
+
+* {
+    margin: 0;
+    
+    
+    font-family: 'Electrolize', sans-serif;
+
+}
+body {
+    height: 100vh;
+    background-color: black;
+
+}
+html {
+    overflow-x: hidden;
+}
+
+/*! base css end  */
+
+/*! navbar start  */
+.navbar {
+    width: 100%;
+    background-color: black;
+    color: white;
+    height: 60px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+.navbar .navbar-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    height: 100%;
+    color: white;
+}
+.navbar .menu-list {
+    display: flex;
+    list-style: none;
+    column-gap: 1.25rem;
+    cursor: pointer;
+}
+.navbar .logo{
+    color: rgb(255, 70, 70);
+    font-size: 2rem;
+}
+
+.navbar .menu-list-item:hover{
+    font-weight: bold;
+    
+}
+.navbar .menu-list-item.active {
+    font-weight: bold;
+}
+.navbar .profile-container {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+}
+.navbar .profile-container .profile-picture{
+    width: 2rem;
+    height: 2rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.navbar .profile-container .profile-text-container {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+.navbar .toggle {
+    width: 40px;
+    height: 20px;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+.navbar .toggle i {
+    color: goldenrod;
+}
+
+.navbar .toggle-ball{
+    width: 18px;
+    height: 18px;
+    background-color: black;
+    position: absolute;
+    right: 1px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .5s ease all;
+}
+
+
+/*! navbar end  */
+
+/*! sidebar start  */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2.4rem;
+    color: #fff;
+    background-color: black;
+    width: 60px;
+    height: 100%;
+    position: fixed;
+    
+}
+.sidebar i{
+    font-size: 1rem;
+    
+}
+
+/*! sidebar end  */
+
+/*! container start  */
+
+.container {
+    color: white;
+    background-color: black;
+}
+.content-wrapper {
+    margin-left: 50px;
+}
+.container .featured-content {
+    height: calc(100vh - 160px);
+    padding: 50px;
+    background: url(img/spiderman.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+.featured-content .featured-title{
+    width: 360px;
+    margin-top: 10px;
+    
+}
+.container .featured-content p {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+    padding: 1rem 1rem;
+    margin: 30px 0;
+    width: 500px;
+}
+.content-wrapper .featured-buttons .play-button {
+    padding: 10px 32px;
+    background-color: rgb(233, 232, 232);
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 1rem;
+}
+.content-wrapper .featured-buttons .info-button {
+    padding: 10px 32px;
+    background-color: rgb(233, 232, 232);
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 1rem;
+}
+.content-wrapper .featured-buttons i {
+    margin-right: 6px;
+}
+.content-wrapper .movie-list-filter{
+    
+    margin: 20px 0;
+    padding: 20px;
+}
+.content-wrapper .movie-list-filter select {
+    background-color: #000;
+    color: white;
+    padding: 7px 0;
+    width: 125px;
+}
+.movie-list-container{
+    
+    padding: 0 20px;
+}
+.movie-list-container .movie-list {
+    list-style: none;
+}
+.movie-list-title {
+    line-height: 1;
+    margin-bottom: 30px;
+}
+.movie-list-container .movie-list .movie-item-img{
+    width: 270px;
+    height: 200px;
+    object-fit: cover;
+    transition: all 0.5s ease-in;
+}
+.movie-list-wrapper {
+    position: relative;
+    overflow: hidden;
+    
+}
+.movie-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    height: 300px;
+    transform: translateX(0);
+    transition: 1s all ease-in-out;
+    
+    
+}
+.movie-item {
+    position: relative;
+    transition: ease 0.5s;
+    
+}
+.movie-item:hover .movie-item-info{
+    opacity: 1;
+}
+.movie-item:hover .movie-item-img {
+    transform: scale(1.2);
+    margin: 0 30px;
+
+}
+.movie-item-info {
+    opacity: 0;
+    transition: ease 0.5s;
+}
+.movie-item-title {
+    background-color: rgb(40, 40, 40, 0.4);
+    padding: 0 10px;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10%;
+    left: 50px;
+    
+    transition: 1s all ease-in-out;
+}
+.movie-item-buttons {
+    background-color: rgb(40, 40, 40, 0.4);
+    padding: 10px;
+    font-size: 20px;
+    display: flex;
+    column-gap: 20px;
+    position: absolute;
+    bottom: 10%;
+    left: 50px;
+    
+    transition: 1s all ease-in-out;
+}
+.movie-item-buttons i {
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 0.5s all ease;
+}
+.arrow {
+    width: 100px;
+    display: flex;
+    font-size: 120px;
+    position: absolute;
+    top: 90px;
+    right: 5px;
+    color: lightgray;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: 0.5s ease all;
+}
+.arrow:hover{
+    opacity: 1;
+}
+
+
+/*! container end  */
